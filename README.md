@@ -10,7 +10,28 @@
 
 정규표현식은 간단한 패턴부터 복잡한 패턴까지 다양한 규칙을 표현할 수 있습니다. 
 1. 파이썬에서 정규 표현식을 사용하기 위해서는 'import re'를 사용하여 모듈을 가져옵니다.
+
+        import re
+
 2. 'search'함수를 사용하여 정규 표현식 패턴과 일치하는 첫 번째 문자열을 검색합니다. group() 메서드를 호출하여 일치하는 문자열을 가져올 수 있습니다.
+
+        match = pattern.search('검색 대상 문자열')
+        if match:
+        print(match.group())
+
 3. 'match()' 함수를 사용하여 문자열의 시작부터 정규 표현식 패턴과 일치하는지 확인할 수 있습니다.
+
+        match = pattern.match('대상 문자열')
+        if match:
+        print('일치합니다.')
+
 4. 'sub()' 함수를 사용하여 정규 표현식 패턴과 일치하는 문자열을 다른 문자열로 치환할 수 있습니다.
+
+        new_string = pattern.sub('치환할 문자열', '대상 문자열')
+        print(new_string)
+
 5. 'split()' 함수를 사용하여 정규 표현식 패턴을 기준으로 문자열을 분할할 수 있습니다.
+
+        result = pattern.split('분할할 문자열')
+        print(result)
+
